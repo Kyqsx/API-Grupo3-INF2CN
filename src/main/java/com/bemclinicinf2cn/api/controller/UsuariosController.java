@@ -20,7 +20,7 @@ public class UsuariosController {
     private UsuarioService service;
 
     // Listar todos os usuários
-    @GetMapping
+    @GetMapping("/getusers")
     public ResponseEntity<List<Usuario>> listarUsuarios() {
         List<Usuario> usuarios = service.listarUsuarios();
         return new ResponseEntity<>(usuarios, HttpStatus.OK);
@@ -35,7 +35,7 @@ public class UsuariosController {
     }
 
     // Incluir novo usuário
-    @PostMapping
+    @PostMapping("/signup")
     public ResponseEntity<Usuario> incluir(@RequestBody Usuario usuario) {
         try {
             Usuario novoUsuario = service.incluir(usuario);

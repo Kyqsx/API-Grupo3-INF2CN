@@ -66,4 +66,3 @@ public class UsuarioService {
         return usuarioRepository.findByEmail(email);
     }
 }
-
